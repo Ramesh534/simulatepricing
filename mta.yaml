@@ -1,0 +1,47 @@
+ID: simulatepricing
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ 
+ - name: simulatedb
+   type: hdb
+   path: simulatedb
+   requires:
+    - name: hdi_simulatedb
+      properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+    - name: ups_csr_si
+ - name: simulatejs
+   type: nodejs
+   path: simulatejs
+   provides:
+    - name: simulatejs_api
+      properties:
+         url: ${default-url}
+   requires:
+     - name: destination
+     - name: uaa_simulate
+     - name: hdi_simulatedb
+     - name: simulatedb
+
+ 
+
+resources:
+ - name: hdi_simulatedb
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+  
+ - name: uaa_simulate
+   parameters:
+      service-plan: application
+      service: xsuaa
+      path: ./xs-security.json
+   type: org.cloudfoundry.managed-service
+
+ - name: destination
+   type: org.cloudfoundry.existing-service
+
+ - name: ups_csr_si
+   type: org.cloudfoundry.existing-service
