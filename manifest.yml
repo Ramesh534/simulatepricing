@@ -1,0 +1,6 @@
+---
+applications:
+- name: simulatepricing
+  instances: 1
+  memory: 800m
+  path: target/simulatepricing.mtar
