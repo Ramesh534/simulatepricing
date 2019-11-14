@@ -1,0 +1,53 @@
+{
+  "dependencies": {
+				  	"body-parser": "^1.18.3",
+				    "cfenv": "^1.1.0",
+				    "express": "^4.16.4",
+				    "http": "*",
+				    "http-proxy-agent": "^2.1.0",
+				    "https": "^1.0.0",
+				    "https-proxy-agent": "*",
+				    "node-fetch": "^2.6.0",
+				    "npm": "*",
+				    "request": "^2.88.0",
+				    "request-promise": "*",
+				    "url": "*",
+				    "ws":"latest",
+				    "events":"*",
+				    "@sap/cds": "^3.17.4",
+			        "express": "^4.17.1",
+			        "hdb": "^0.17.1",
+			         "request": "^2.88.0",
+			        "@sap/xsenv": "^1.2.9",
+			        "request-promise":"latest"  ,
+					"@sap/xssec": "2.1.15",  
+					"@sap/hdbext": "~5.0",
+					"@sap/hana-client": "~2.3",
+					"@sap/textbundle": "latest",
+					"@sap/logging": "~4.0",
+					"@sap/audit-logging": "2.2.4",
+					"passport": "~0.4.0",
+					"async": "latest",
+					"compression": "~1.7",
+		             "helmet": "~3.15"
+  	
+  },
+  "description": "my description",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-junit": "^5.2.0",
+    "@sap/xsenv": "^1.2.9"
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "simulatejs",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest --config jest.json",
+    "test-coverage": "node node_modules/jest/bin/jest --coverage --config jest.json",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "version": "1.0.0"
+}

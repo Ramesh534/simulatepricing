@@ -1,0 +1,9 @@
+PROCEDURE "test"( in a varchar,out b varchar)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN 
+
+  b= a||'Called';
+END

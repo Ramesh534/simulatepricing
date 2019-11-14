@@ -1,0 +1,143 @@
+entity D_ITEMS
+		{
+	       key MANDT:String(3);
+		   key DB_KEY:Binary(16);
+			ROOT_KEY:String(16);
+			PARENT_KEY:String(16);
+			MATNR:String(18);
+			SESSION_ID:String(16);
+			KNUMH:String(10);
+			KOPOS:String(2);
+			VAKEY:String(100);
+			DATBI:String(8);
+			DATAB:String(8);
+			STFKZ:String(1);
+			KZBZG:String(1);
+			KSTBM:Decimal(15,3);
+			KONMS:String(3);
+			KSTBW:Decimal(15,2);
+			KONWS:String(5);
+			KRECH:String(1);
+			OLD_RATE:Decimal(11,2);
+			KONWA:String(5);
+			KPEIN:Decimal(5,0);
+			KMEIN:String(3);
+			NEW_KONWA:String(5);
+			NEW_KPEIN:Decimal(5,0);
+			NEW_KMEIN:String(3);
+			NEW_RATE:Decimal(11,2);
+			MANUL_RATE:Decimal(11,2);
+			STPRS:Decimal(11,2);
+			BPM_STAT:String(2);
+			BPM_REJR:String(2);
+			BPM_APP_DATE:String(8);
+			BPM_APP_TIME:String(6);
+			BPM_APP_USNA:String(12);
+			UPLOAD_STAT:String(1);
+			SCALE:String(1);
+			MXKBAS:Decimal(15,3);
+			KOMXWRT:Decimal(13,2);
+			MXWRT:Decimal(11,2);
+			GKWRT:Decimal(11,2);
+			NEW_MXKBAS:Decimal(15,3);
+			NEW_KOMXWRT:Decimal(13,2);
+			NEW_MXWRT:Decimal(11,2);
+			NEW_GKWRT:Decimal(11,2);
+			KNUMA_AG:String(10);
+			PUR_GROUP:String(3);
+			PLND_DELRY:Decimal(3,0);
+			OLD_DATBI:String(8);
+			OLD_DATAB:String(8);
+			PRICE_ORIGIN:String(1);
+			BPM_DELETE:String(1);
+			BPM_SUBMIT:String(2);
+			BPM_REJ_TEXT:String(250);
+			ACTION:String(2);
+			BPM_OPR:String(1);
+			VALUE:Decimal(10,2);
+			CURCY:String(5);
+			VPVOR:String(1);
+			TXPRF:String(1);
+			C_KPEIN:Decimal(5,0);
+			C_KMEIN:String(3);
+			C1_RATE:Decimal(11,2);
+			C1_NAME:String(40);
+			C2_RATE:Decimal(11,3);
+			C2_NAME:String(40);
+			QUANTITY:Integer;
+			USR01:String(100);
+			USR02:String(100);
+			USR03:String(100);
+			USR04:String(100);
+			USR05:String(100);
+			USR06:String(100);
+			USR07:String(100);
+			USR08:String(100);
+			USR09:String(100);
+			USR10:String(100);
+			USR11:String(100);
+			USR12:String(100);
+			USR13:String(100);
+			USR14:String(100);
+			USR15:String(100);
+			USR16:String(100);
+			USR17:String(100);
+			USR18:String(100);
+			USR19:String(100);
+			USR20:String(100);
+			USR21:String(100);
+			USR22:String(100);
+			USR23:String(100);
+			USR24:String(100);
+			USR25:String(100);
+
+		};
+ 
+entity D_HEAD {
+		MANDT:String(3);
+		DB_KEY:Binary(16);
+		PARENT_KEY:Binary(16);
+		LAUFI:String(6);
+		LAUFD:String(8);
+		BPM_GRP:String(20);
+		BPM_SGRP:String(20);
+		KSCHL:String(4);
+		KOTABNR:String(3);
+		BPM_OPR:String(1);
+		VALUE:Decimal(10,2);
+		CURCY:String(5);
+		VPVOR:String(1);
+		TXPRF:String(1);
+		ACTION:String(2);
+		STATUS:String(5);
+		ALL_STAT:String(10);
+		NEW_STAT:String(10);
+		DUE_STAT:String(10);
+		APP_STAT:String(10);
+		REJ_STAT:String(10);
+		PRC_STAT:String(10);
+		PRINFORECTEXT:String(60);
+		GSTRU:String(30);
+		VTEXT1:String(20);
+
+};
+
+ 
+entity USERFIELD_CONFIG {
+
+  key USER_FIELD :String(5);
+      COND_TYPE :String(10);
+      COND_DESC :String(100);
+}
+ 
+ 
+entity MVKE{
+	    MVGR1 : String(3);
+	    MATNR : String(18);
+}
+
+ 
+entity MARA{
+	     
+	    MATNR : String(18);
+}
